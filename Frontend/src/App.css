@@ -26,9 +26,11 @@ main .right {
   border-radius: 0.7rem;
 }
 
+
 main .left {
   background-color: #000000;
   position: relative;
+  overflow-y: auto;
 }
 
 .left .code,
@@ -39,6 +41,7 @@ main .left {
   margin: 0;
   border-radius: 0.7rem;
   background-color: #0c0c0c;
+  
 }
 
 main .left .review {
@@ -50,7 +53,7 @@ main .left .review {
   padding: 0.5rem 2rem;
   font-weight: 500;
   cursor: pointer;
-  user-select: none;
+  user-select: none;  
   border-radius: 0.7rem;
 }
 
@@ -58,6 +61,22 @@ main .left .review {
 main .right {
   background-color: #343434;
   padding: 1rem 2rem;
-  font-size: 1.5rem;
   overflow: auto;
+}
+
+
+
+
+
+.loader {
+  border: 2px solid rgba(69, 68, 68, 0.2);
+  border-top: 2px solid black;
+  border-radius: 50% 50%;
+  width: 23px;
+  height: 22px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
